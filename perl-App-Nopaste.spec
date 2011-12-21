@@ -8,7 +8,7 @@
 Summary:	App::Nopaste - easy access to any pastebin
 Name:		perl-App-Nopaste
 Version:	0.33
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -21,10 +21,10 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 #BuildRequires:	perl(Browser::Open)
 #BuildRequires:	perl(Clipboard)
 #BuildRequires:	perl(Config::GitLike) >= 0.00
-#BuildRequires:	perl(MooseX::Getopt) >= 0.17
 #BuildRequires:	perl(WWW::Pastebin::PastebinCom::Create)
 BuildRequires:	perl-Class-Load
 BuildRequires:	perl-Moose >= 0.74
+BuildRequires:	perl-MooseX-Getopt >= 0.17
 BuildRequires:	perl-URI
 BuildRequires:	perl-WWW-Mechanize
 %endif
@@ -66,5 +66,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/*
 
 #files -n nopaste
-%{_bindir}/nopaste
+%attr(755,root,root) %{_bindir}/nopaste
 %{_mandir}/man1/nopaste.1p*
