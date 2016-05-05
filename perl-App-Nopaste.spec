@@ -8,7 +8,7 @@
 Summary:	App::Nopaste - easy access to any pastebin
 Name:		perl-App-Nopaste
 Version:	0.33
-Release:	3
+Release:	4
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
