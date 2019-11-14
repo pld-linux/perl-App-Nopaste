@@ -7,13 +7,13 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	App::Nopaste - easy access to any pastebin
 Name:		perl-App-Nopaste
-Version:	0.33
-Release:	4
+Version:	1.013
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/App/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	5a4004727f8fc02336b8f8de66c226c8
+# Source0-md5:	a32fe4ee8f8887dc9064c221eaf7372f
 URL:		http://search.cpan.org/dist/App-Nopaste/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -40,10 +40,8 @@ code that would normally be too long to give directly in the channel
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
-%{__sed} -i -e '1s,^#!.*perl,#!%{__perl},' bin/nopaste
-
 %build
-%{__perl} Makefile.PL --skipdeps \
+echo y | %{__perl} Makefile.PL --skipdeps \
 	INSTALLDIRS=vendor
 %{__make}
 
