@@ -4,7 +4,6 @@
 
 %define		pdir	App
 %define		pnam	Nopaste
-%include	/usr/lib/rpm/macros.perl
 Summary:	App::Nopaste - easy access to any pastebin
 Name:		perl-App-Nopaste
 Version:	1.013
